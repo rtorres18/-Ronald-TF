@@ -1,0 +1,66 @@
+<h1>Listando Planes de Negocios</h1>
+
+<table border="3" cellpadding="1" cellspacing="1" bgcolor=#FFFFFF>
+  <tr>
+    <th>Cod. Plan</th>
+    <th>Titulo Plan</th>
+    <th>Categoria</th>
+    <th>Subcategoria</th>
+    <th>Vision</th>
+    <th>Razonamiento</th>
+    <th>Tiempo de Ejecucion Ano</th>
+    <th>Tiempo de Ejecucion Mes</th>
+    <th>Tiempo de Ejecucion Dia</th>
+    <th>Inversion Total</th>
+    <th>Margen Neto</th>
+    <th>Roi</th>
+    <th>Link del Documento</th>
+    <th>Precio Venta</th>
+    <th>Validar Plan</th>
+    <th>Mensaje de Rechazo</th>
+    <th>Sabio</th>
+    <th>Emprendedor</th>
+	
+  </tr>
+
+<% @plannegocios.each do |plannegocio| %>
+  <tr>
+    <td><%= plannegocio.codplan %></td>
+    <td><%= plannegocio.tituloplan %></td>
+    <td><%= plannegocio.codcategoria %></td>
+    <td><%= plannegocio.codsubcategoria %></td>
+    <td><%= plannegocio.vision %></td>
+    <td><%= plannegocio.razonamiento %></td>
+    <td><%= plannegocio.tiempoejecucionano %></td>
+    <td><%= plannegocio.tiempoejecucionmes %></td>
+    <td><%= plannegocio.tiempoejecuciondia %></td>
+    <td><%= plannegocio.inversiontotal %></td>
+    <td><%= plannegocio.margenneto %></td>
+    <td><%= plannegocio.roi %></td>
+    <td><%= plannegocio.linkdocumento %></td>
+    <td><%= plannegocio.precioventa %></td>
+    <td><%= plannegocio.validadoplan %></td>
+    <td><%= plannegocio.mensajerechazo %></td>
+    <td><%= plannegocio.codsabio %></td>
+    <td><%= plannegocio.codemprendedor %></td>
+    <td><%= link_to 'Visualizar', plannegocio %></td>
+    <td><%= link_to 'Editar', edit_plannegocio_path(plannegocio) %></td>
+    <td><%= link_to 'Eliminar', plannegocio, method: :delete, data: { confirm: 'Estas tu seguro de eliminar el plan de negocio?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Crear Nuevo Plan de Negocio', new_plannegocio_path %>
+
+<%= form_for @search do |f| %>   
+ 
+ <p><th>Busqueda por:</th></p>
+ <p>   
+ 
+<%= f.label :tituloplan_contains %>   
+<%= f.text_field :tituloplan_contains %>   
+</p>   
+<p class="button"><%= f.submit "Search" %> </p>   
+<% end %>  

@@ -1,0 +1,23 @@
+<h1>Lista de Subcategorias</h1>
+
+<table>
+  <tr>  
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @subcategoria.each do |subcategorium| %>
+  <tr>    
+    <td><%= subcategorium.nombresubcategoria %></td>
+    <td><%= link_to 'Mostrar', subcategorium %></td>
+    <td><%= link_to 'Editar', edit_subcategorium_path(subcategorium) %></td>
+    <td><%= link_to 'Eliminar', subcategorium, method: :delete, data: { confirm: 'Esta seguro de eliminarlo?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Subcategoria', new_subcategorium_path %>

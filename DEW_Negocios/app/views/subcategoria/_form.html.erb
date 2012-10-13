@@ -1,0 +1,29 @@
+<%= form_for(@subcategorium) do |f| %>
+  <% if @subcategorium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subcategorium.errors.count,'Error')%></h2>
+
+      <ul>
+      <% @subcategorium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label :Descripcion%><br />
+    <%= f.text_field :nombresubcategoria %>
+  </div>
+  
+   <div class="field">    
+	<%= f.label :Categoria%><br />
+    <%= f.collection_select :categoria_id, Categorium.all, :id, :nombrecategoria, :prompt => true %>	
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

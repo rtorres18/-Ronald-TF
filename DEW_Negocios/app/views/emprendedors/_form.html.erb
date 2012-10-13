@@ -1,0 +1,81 @@
+<%= form_for(@emprendedor) do |f| %>
+  <% if @emprendedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@emprendedor.errors.count, "error") %> prohibited this emprendedor from being saved:</h2>
+
+      <ul>
+      <% @emprendedor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Codigo" %><br />
+    <%= f.text_field :codsabio %>
+  </div>
+  <div class="field">
+          <%= f.label "Nombres" %><br />
+    <%= f.text_field :nombres %>
+  </div>
+  <div class="field">
+            <%= f.label "Apellido Paterno" %><br />
+    <%= f.text_field :apepaterno %>
+  </div>
+  <div class="field">
+            <%= f.label "Apellido Materno" %><br />
+    <%= f.text_field :apematerno %>
+  </div>
+  <div class="field">
+            <%= f.label "Sexo" %><br />
+    <%= f.text_field :sexo %>
+  </div>
+  <div class="field">
+            <%= f.label "Tipo de Documento de Identidad" %><br />
+    <%= f.text_field :tipodi %>
+  </div>
+  <div class="field">
+            <%= f.label "Número de Documento de Identidad" %><br />
+    <%= f.number_field :numerodi %>
+  </div>
+  <div class="field">
+            <%= f.label "Correo Electrónico" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+            <%= f.label "Celular" %><br />
+    <%= f.number_field :celular %>
+  </div>
+  <div class="field">
+            <%= f.label "Dirección" %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+            <%= f.label "Fecha de Nacimiento" %><br />
+    <%= f.date_select :fecnac %>
+  </div>
+  <div class="field">
+            <%= f.label "Contraseña" %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label "Apelativo" %><br />
+    <%= f.text_field :apelativo %>
+  </div>
+  <div class="field">
+    <%= f.label "Autobigrafia" %><br />
+    <%= f.text_area :autobigrafia %>
+  </div>
+  <div class="field">
+    <%= f.label "Web Personal" %><br />
+    <%= f.text_field :web %>
+  </div>
+  <div class="field">
+    <%= f.label "Cuenta Bancaria" %><br />
+    <%= f.number_field :ctabancaria %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

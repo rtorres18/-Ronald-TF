@@ -1,0 +1,52 @@
+<h1>Lista de Emprendedores</h1>
+
+<table border="3" cellpadding="1" cellspacing="1" bgcolor=#FFFFFF>
+  <tr>
+    <th>Codigo</th>
+    <th>Nombres</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Sexo</th>
+    <th>Tipo DI</th>
+    <th>Numero di</th>
+    <th>Email</th>
+    <th>Celular</th>
+    <th>Direccion</th>
+    <th>Fecha Nac</th>
+    <th>Contraseña</th>
+    <th>Apelativo</th>
+    <th>Autobigrafia</th>
+    <th>Web Personal</th>
+    <th>Cuenta Bancaria</th>
+    
+ 
+  </tr>
+
+<% @emprendedors.each do |emprendedor| %>
+  <tr>
+    <td><%= emprendedor.codsabio %></td>
+    <td><%= emprendedor.nombres %></td>
+    <td><%= emprendedor.apepaterno %></td>
+    <td><%= emprendedor.apematerno %></td>
+    <td><%= emprendedor.sexo %></td>
+    <td><%= emprendedor.tipodi %></td>
+    <td><%= emprendedor.numerodi %></td>
+    <td><%= emprendedor.email %></td>
+    <td><%= emprendedor.celular %></td>
+    <td><%= emprendedor.direccion %></td>
+    <td><%= emprendedor.fecnac %></td>
+    <td><%= emprendedor.password %></td>
+    <td><%= emprendedor.apelativo %></td>
+    <td><%= emprendedor.autobigrafia %></td>
+    <td><%= emprendedor.web %></td>
+    <td><%= emprendedor.ctabancaria %></td>
+    <td><%= link_to 'Visualizar', emprendedor %></td>
+    <td><%= link_to 'Editar', edit_emprendedor_path(emprendedor) %></td>
+    <td><%= link_to 'Eliminar', emprendedor, method: :delete, data: { confirm: 'Estas tu seguro de eliminar al emprendedor?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Emprendedor', new_emprendedor_path %>

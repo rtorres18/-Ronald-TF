@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codsabio: MyString
+  nombres: MyString
+  apepaterno: MyString
+  apematerno: MyString
+  sexo: MyString
+  tipodi: MyString
+  numerodi: 1
+  email: MyString
+  celular: 1
+  direccion: MyString
+  fecnac: 2012-09-19
+  password: MyString
+  apelativo: MyString
+  autobigrafia: MyText
+  web: MyString
+  ctabancaria: 1
+
+two:
+  codsabio: MyString
+  nombres: MyString
+  apepaterno: MyString
+  apematerno: MyString
+  sexo: MyString
+  tipodi: MyString
+  numerodi: 1
+  email: MyString
+  celular: 1
+  direccion: MyString
+  fecnac: 2012-09-19
+  password: MyString
+  apelativo: MyString
+  autobigrafia: MyText
+  web: MyString
+  ctabancaria: 1

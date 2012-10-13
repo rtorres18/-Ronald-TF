@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codplan: MyString
+  tituloplan: MyString
+  codcategoria: MyString
+  codsubcategoria: MyString
+  vision: MyText
+  razonamiento: MyText
+  tiempoejecucionano: 1
+  tiempoejecucionmes: 1
+  tiempoejecuciondia: 1
+  inversiontotal: 9.99
+  margenneto: 9.99
+  roi: 9.99
+  linkdocumento: MyString
+  precioventa: 9.99
+  validadoplan: MyString
+  mensajerechazo: MyText
+  codsabio: MyString
+  codemprendedor: MyString
+
+two:
+  codplan: MyString
+  tituloplan: MyString
+  codcategoria: MyString
+  codsubcategoria: MyString
+  vision: MyText
+  razonamiento: MyText
+  tiempoejecucionano: 1
+  tiempoejecucionmes: 1
+  tiempoejecuciondia: 1
+  inversiontotal: 9.99
+  margenneto: 9.99
+  roi: 9.99
+  linkdocumento: MyString
+  precioventa: 9.99
+  validadoplan: MyString
+  mensajerechazo: MyText
+  codsabio: MyString
+  codemprendedor: MyString

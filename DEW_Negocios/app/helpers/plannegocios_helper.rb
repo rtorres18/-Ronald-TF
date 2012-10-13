@@ -1,0 +1,2 @@
+module PlannegociosHelper
+end

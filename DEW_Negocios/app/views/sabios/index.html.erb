@@ -1,0 +1,45 @@
+<h1>Lista de Sabios</h1>
+
+<table border="3" cellpadding="1" cellspacing="1" bgcolor=#FFFFFF>
+  <tr>
+    <th>Codigo</th>
+    <th>Nombres</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Sexo</th>
+    <th>Tipo DI</th>
+    <th>Numero di</th>
+    <th>Email</th>
+    <th>Celular</th>
+    <th>Direccion</th>
+    <th>Fecha Nac</th>
+    <th>Contraseña</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sabios.each do |sabio| %>
+  <tr>
+    <td><%= sabio.codemprendedor %></td>
+    <td><%= sabio.nombres %></td>
+    <td><%= sabio.apepaterno %></td>
+    <td><%= sabio.apematerno %></td>
+    <td><%= sabio.sexo %></td>
+    <td><%= sabio.tipodi %></td>
+    <td><%= sabio.numerodi %></td>
+    <td><%= sabio.email %></td>
+    <td><%= sabio.celular %></td>
+    <td><%= sabio.direccion %></td>
+    <td><%= sabio.fecnac %></td>
+    <td><%= sabio.password %></td>
+    <td><%= link_to 'Show', sabio %></td>
+    <td><%= link_to 'Edit', edit_sabio_path(sabio) %></td>
+    <td><%= link_to 'Destroy', sabio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Sabio', new_sabio_path %>

@@ -1,0 +1,27 @@
+<h1>Preguntas</h1>
+
+<table>
+  <tr>
+    <th>Pregunta</th>
+    <th>Respuesta</th>
+    <th>Satisfactorio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faqs.each do |faq| %>
+  <tr>
+    <td><%= faq.pregunta %></td>
+    <td><%= faq.respuesta %></td>
+    <td><%= faq.satisfactorio %></td>
+    <td><%= link_to 'Mostrar', faq %></td>
+    <td><%= link_to 'Editar', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Eliminar', faq, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Consulta', new_faq_path %>
